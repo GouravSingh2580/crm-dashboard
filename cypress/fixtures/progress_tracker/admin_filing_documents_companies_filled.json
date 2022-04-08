@@ -1,0 +1,49 @@
+{
+  "data": [
+    {
+      "id": "6115693e68694b68950e53b1",
+      "name": "example name",
+      "entityType": "Sole-Prop",
+      "legacyEntityType": "Sole-Prop",
+      "industry": "Dentist",
+      "ein": "555566666",
+      "description": "Test description 1640199714816",
+      "suggested": [
+        {
+          "name": "Formations"
+        },
+        {
+          "name": "Cypress"
+        },
+        {
+          "name": "Formie"
+        }
+      ],
+      "contactDetails": {
+        "mailingAddress": {
+          "street1": "123 test ave",
+          "street2": "",
+          "city": "Seattle",
+          "state": "AL",
+          "country": "USA",
+          "zip": "12345"
+        },
+        "physicalAddress": {
+          "street1": "123 test ave",
+          "street2": "",
+          "city": "Seattle",
+          "state": "AL",
+          "country": "USA",
+          "zip": "12345"
+        },
+        "workPhone": "(123) 456-7891"
+      },
+      "bankName": "Chase",
+      "useExistingBank": true,
+      "incorporationDate": "01/01/2000",
+      "updatedAt": "2021-12-22T19:01:56.988Z",
+      "updatedBy": "60e88808782b4666fd2ac140",
+      "hasBankAccount": false
+    }
+  ]
+}

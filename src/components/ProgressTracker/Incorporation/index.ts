@@ -1,0 +1,1 @@
+export { Incorporation } from './Incorporation';

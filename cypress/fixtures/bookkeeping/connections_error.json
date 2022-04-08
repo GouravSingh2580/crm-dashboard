@@ -1,0 +1,13 @@
+[
+  {
+    "id": "342f88fe-2868-11ec-9292-acde48001122",
+    "account_id": "61268a98f3bb3878775c469f",
+    "name": "Chase",
+    "item_id": "3AR33ep6R3umkeRnPQppu8NXEqN5X7tqWkBew",
+    "last_fetch_date": "2021-10-08T13:48:40.133808-07:00",
+    "error_msg": "the login details of this item have changed (credentials, MFA, or required user action) and a user login is required to update this information. use Link's update mode to restore the item to a good state",
+    "created_by": "612686d0032e980069c6f357",
+    "created_at": "2021-10-08T11:47:35.892462-07:00",
+    "updated_at": "2021-10-08T13:48:40.13745-07:00"
+  }
+]

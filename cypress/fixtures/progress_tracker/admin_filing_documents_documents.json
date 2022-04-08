@@ -1,0 +1,212 @@
+{
+  "data": [
+    {
+      "id": "61d4bd638968437f7007320e",
+      "companyId": "",
+      "accountId": "61156916630d9f92ee1acab9",
+      "title": "485-4852378_sample-logo-png-transparent-png.png",
+      "status": "Approved",
+      "forYear": "2022",
+      "metadata": {
+        "mimeType": "image/png",
+        "size": 62485,
+        "filename": "485-4852378_sample-logo-png-transparent-png.png",
+        "hash": "71aff4e0ab688079e55c1bdafc30c0dd"
+      },
+      "documentCategory": {
+        "id": "606f7387f2b41b4bd023b695",
+        "department": "Permanent",
+        "category": "Organizational Docs",
+        "subcategory": "Miscellaneous"
+      },
+      "visibleToCustomer": false,
+      "uploader": {
+        "id": "61313607be6422d7e340f1b0",
+        "name": {
+          "first": "Toan",
+          "middle": "",
+          "last": "Nguyen"
+        },
+        "email": "toan@formationscorp.com",
+        "stage": "IncoporationDataReceived",
+        "accountId": "61313607be6422d7e340f1af",
+        "companyId": "61313625fe6170fdd47dcee7",
+        "contactId": "61313606fe6170fdd47dcee6",
+        "role": "Admin",
+        "dob": "01/01/2000",
+        "createdAt": "2021-09-02T20:37:27.057Z",
+        "updatedAt": "2021-09-09T19:43:06.989Z",
+        "notification_preference": null,
+        "newsletter": null,
+        "bankName": "Test bank",
+        "routingNumber": "123456789",
+        "bankAccountNumber": "1234567890",
+        "bankAccountType": "checking",
+        "lastAcceptedVersion": "2021-09-06",
+        "tncAcceptedAt": "2021-09-09T19:43:06.989Z"
+      },
+      "uploadedAt": "2022-01-04T21:34:27.087Z"
+    },
+    {
+      "id": "61a7f8be3064d160052a2e0b",
+      "companyId": "",
+      "accountId": "61156916630d9f92ee1acab9",
+      "title": "485-4852378_sample-logo-png-transparent-png.png",
+      "status": "Submitted",
+      "forYear": "2021",
+      "metadata": {
+        "mimeType": "image/png",
+        "size": 62485,
+        "filename": "485-4852378_sample-logo-png-transparent-png.png",
+        "hash": "71aff4e0ab688079e55c1bdafc30c0dd"
+      },
+      "documentCategory": {
+        "id": "606f7387f2b41b4bd023b6ad",
+        "department": "Permanent",
+        "category": "Miscellaneous",
+        "subcategory": "Biographical Information"
+      },
+      "visibleToCustomer": true,
+      "uploader": {
+        "id": "61156916630d9f92ee1acaba",
+        "name": {
+          "first": "Cypress",
+          "middle": "",
+          "last": "Test"
+        },
+        "email": "cypresstest@formationscorp.com",
+        "stage": "IncoporationDataReceived",
+        "accountId": "61156916630d9f92ee1acab9",
+        "companyId": "6115693e68694b68950e53b1",
+        "contactId": "6115691568694b68950e53b0",
+        "role": "Customer",
+        "dob": "01/01/2000",
+        "createdAt": "2021-08-12T18:31:50.751Z",
+        "updatedAt": "2021-12-01T22:30:46.363Z",
+        "notification_preference": null,
+        "newsletter": null,
+        "bankName": "Test bank 2 3",
+        "routingNumber": "123456789",
+        "bankAccountNumber": "123456789",
+        "bankAccountType": "checking",
+        "progress": [
+          {
+            "group": "deposit-info",
+            "step": "deposit-info"
+          }
+        ],
+        "lastAcceptedVersion": "2021-09-06",
+        "tncAcceptedAt": "2021-09-07T14:08:44.213Z"
+      },
+      "uploadedAt": "2021-12-01T22:35:42.534Z"
+    },
+    {
+      "id": "615f908635c3cb88532ba1c8",
+      "companyId": "6115693e68694b68950e53b1",
+      "accountId": "61156916630d9f92ee1acab9",
+      "title": "sample_image.jpeg",
+      "status": "Submitted",
+      "forYear": "2021",
+      "metadata": {
+        "mimeType": "image/jpeg",
+        "size": 362558,
+        "filename": "sample_image.jpeg",
+        "hash": "016c6120665106126128d05b66ddbf20"
+      },
+      "documentCategory": {
+        "id": "606f7387f2b41b4bd023b6ad",
+        "department": "Permanent",
+        "category": "Miscellaneous",
+        "subcategory": "Biographical Information"
+      },
+      "visibleToCustomer": true,
+      "uploader": {
+        "id": "61156916630d9f92ee1acaba",
+        "name": {
+          "first": "Cypress",
+          "middle": "",
+          "last": "Test"
+        },
+        "email": "cypresstest@formationscorp.com",
+        "stage": "IncoporationDataReceived",
+        "accountId": "61156916630d9f92ee1acab9",
+        "companyId": "6115693e68694b68950e53b1",
+        "contactId": "6115691568694b68950e53b0",
+        "role": "Customer",
+        "dob": "01/01/2000",
+        "createdAt": "2021-08-12T18:31:50.751Z",
+        "updatedAt": "2021-12-01T22:30:46.363Z",
+        "notification_preference": null,
+        "newsletter": null,
+        "bankName": "Test bank 2 3",
+        "routingNumber": "123456789",
+        "bankAccountNumber": "123456789",
+        "bankAccountType": "checking",
+        "progress": [
+          {
+            "group": "deposit-info",
+            "step": "deposit-info"
+          }
+        ],
+        "lastAcceptedVersion": "2021-09-06",
+        "tncAcceptedAt": "2021-09-07T14:08:44.213Z"
+      },
+      "uploadedAt": "2021-10-08T00:27:50.263Z"
+    },
+    {
+      "id": "6116b40b99e399dd88ebf921",
+      "companyId": "6115693e68694b68950e53b1",
+      "accountId": "61156916630d9f92ee1acab9",
+      "title": "Formations _ Financial Management.pdf",
+      "status": "Approved",
+      "forYear": "2018",
+      "metadata": {
+        "mimeType": "application/pdf",
+        "size": 62076,
+        "filename": "Formations _ Financial Management.pdf",
+        "hash": "2437d99212a25efcd9e4684a906da2f0"
+      },
+      "documentCategory": {
+        "id": "606f7387f2b41b4bd023b6b0",
+        "department": "Permanent",
+        "category": "Miscellaneous",
+        "subcategory": "Notes"
+      },
+      "visibleToCustomer": false,
+      "uploader": {
+        "id": "60e88808782b4666fd2ac140",
+        "name": {
+          "first": "Shiv",
+          "middle": "",
+          "last": "Agarw"
+        },
+        "email": "admin@formationscorp.com",
+        "stage": "IncoporationDataReceived",
+        "accountId": "60e88808782b4666fd2ac13f",
+        "companyId": "60e88823782b4666fd2ac145",
+        "contactId": "60e888089f4a7ed1e79bda10",
+        "role": "Admin",
+        "dob": "11/11/2000",
+        "createdAt": "2021-07-09T17:31:52.759Z",
+        "updatedAt": "2021-08-19T11:23:53.527Z",
+        "notification_preference": null,
+        "newsletter": null,
+        "bankName": "Chase Bank",
+        "routingNumber": "111111111",
+        "bankAccountNumber": "1313131",
+        "bankAccountType": "savings",
+        "lastAcceptedVersion": "98KXj6fkWSi5cv04o0xF71QJAy_gBfvh",
+        "tncAcceptedAt": "2021-08-19T11:11:15.569Z"
+      },
+      "uploadedAt": "2021-08-13T18:03:55.093Z"
+    }
+  ],
+  "pageInfo": {
+    "pageCount": 1,
+    "pageSize": 100,
+    "totalCount": 4,
+    "currentPage": 1,
+    "nextPage": null,
+    "prevPage": null
+  }
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Retirement Savings",
+    "value": "retirement_savings"
+  },
+  {
+    "name": "Flexible Savings Account",
+    "value": "flexible_savings_account"
+  },
+  {
+    "name": "Health Savings Account",
+    "value": "health_savings_account"
+  },
+  {
+    "name": "I have no benefits",
+    "value": "i_have_no_benefits"
+  }
+]

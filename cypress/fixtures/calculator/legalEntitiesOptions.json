@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Sole Proprietorship",
+    "value": "sole_prop",
+    "desc": "Unincorporated business owned and run by one individual."
+  },
+  {
+    "name": "LLC",
+    "value": "llc",
+    "desc": "Business structure whereby the owners are not personally liable for the company's debts or liabilities."
+  },
+  {
+    "name": "S-Corp",
+    "value": "s_corp",
+    "desc": "An Entity that elects to pass corporate income, losses, deductions, and credits through to its shareholders for federal tax purposes."
+  },
+  {
+    "name": "C-Corp",
+    "value": "c_corp",
+    "desc": "A C-Corporation is a legal business entity taxed as a corporation. The owners, or shareholders, are taxed separately from the entity."
+  }
+]

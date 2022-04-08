@@ -1,0 +1,9 @@
+[
+  { "value": 0, "label": "$0 - I do it all by myself " },
+  { "value": 1250, "label": "Less than $500 per year" },
+  { "value": 2500, "label": "$500 to $1,500 per year" },
+  { "value": 3750, "label": "$1,500 to $3,500 per year" },
+  { "value": 5000, "label": "$3,500 to $5,000 per year" },
+  { "value": 6250, "label": "$5,000 to $7,500 per year" },
+  { "value": 7500, "label": "Over $7,500 per year" }
+]

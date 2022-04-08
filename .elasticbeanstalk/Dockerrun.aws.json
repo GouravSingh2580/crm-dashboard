@@ -1,0 +1,17 @@
+{
+    "AWSEBDockerrunVersion": 2,
+    "containerDefinitions": [
+        {
+            "name": "service",
+            "image": "{{IMAGE}}",
+            "portMappings": [
+                {
+                    "hostPort": 80,
+                    "containerPort": 80
+                }
+            ],
+            "memoryReservation": 512,
+            "essential": true
+        }
+    ]
+}

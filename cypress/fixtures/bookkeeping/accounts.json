@@ -1,0 +1,50 @@
+[
+  {
+    "id": "AEPLLrRdPLU1N9ZmXjGGCpPK9ZjpZwF13JWga",
+    "connection_id": "342f88fe-2868-11ec-9292-acde48001122",
+    "name": "Student loan",
+    "type": "loan",
+    "subtype": "student",
+    "is_connected": false,
+    "official_name": "Plaid student",
+    "created_at": "2021-10-08T11:48:06.832885-07:00",
+    "updated_at": "2021-10-08T13:48:01.882959-07:00",
+    "account_id": "61268a98f3bb3878775c469f"
+  },
+  {
+    "id": "nnryyozNryHxlZKQRwMMInvJkoRnojC6gV8zD",
+    "connection_id": "342f88fe-2868-11ec-9292-acde48001122",
+    "name": "Brokerage",
+    "type": "investment",
+    "subtype": "brokerage",
+    "is_connected": false,
+    "official_name": "Plaid brokerage",
+    "created_at": "2021-10-08T11:48:06.847224-07:00",
+    "updated_at": "2021-10-08T13:48:01.901063-07:00",
+    "account_id": "61268a98f3bb3878775c469f"
+  },
+  {
+    "id": "WDxaaE5bxaSGoN5bqwPPtqjNmboqbAflqyWpv",
+    "connection_id": "342f88fe-2868-11ec-9292-acde48001122",
+    "name": "Checking account test",
+    "type": "depository",
+    "subtype": "checking",
+    "is_connected": false,
+    "official_name": "Checking official account test",
+    "created_at": "2021-10-08T11:48:06.854353-07:00",
+    "updated_at": "2021-10-08T13:48:01.90799-07:00",
+    "account_id": "61268a98f3bb3878775c469f"
+  },
+  {
+    "id": "GDMWWa57MWSNLq58b3ggip6DRwepwaF1RxWbZ",
+    "connection_id": "342f88fe-2868-11ec-9292-acde48001122",
+    "name": "Credit card",
+    "type": "credit",
+    "subtype": "credit card",
+    "is_connected": false,
+    "official_name": "Plaid credit card",
+    "created_at": "2021-10-08T11:48:06.861338-07:00",
+    "updated_at": "2021-10-08T13:48:01.91403-07:00",
+    "account_id": "61268a98f3bb3878775c469f"
+  }
+]

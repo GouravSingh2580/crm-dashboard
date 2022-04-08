@@ -1,0 +1,6 @@
+[
+  { "value": 10, "label": "Less than 10 hours per month" },
+  { "value": 20, "label": "10 hours- 20 hours per month" },
+  { "value": 30, "label": "20 hours - 40 hours per month" },
+  { "value": 40, "label": "Over 40 hours per month" }
+]

@@ -1,0 +1,67 @@
+@import-normalize;
+
+@font-face {
+  font-family: 'Telegraf';
+  src: url(./fonts/Telegraf_200.otf) format('opentype');
+  font-weight: 200;
+  font-style: lighter;
+}
+@font-face {
+  font-family: 'Telegraf';
+  src: url(./fonts/Telegraf_400.otf) format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Telegraf';
+  src: url(./fonts/Telegraf_800.otf) format('opentype');
+  font-weight: 800;
+  font-style: bold;
+}
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url(./fonts/SF_Pro_400.ttf) format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url(./fonts/SF_Pro_800.ttf) format('truetype');
+  font-weight: 800;
+  font-style: bold;
+}
+@font-face {
+  font-family: 'password';
+  src: url(./fonts/text-security-disc-compat.ttf) format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Spartan', 'Telegraf', 'Helvetica', 'Arial', sans-serif;
+  min-width: 320px;
+  line-height: 1.5;
+}
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+.rotating {
+  animation: 5s spinner infinite linear;
+}
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+.hidden {
+  display: none;
+}

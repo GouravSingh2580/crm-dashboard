@@ -1,0 +1,93 @@
+on:
+  issues:
+    types:
+      - opened
+  push:
+    branches:
+      - main
+name: dev deployment
+jobs:
+  setup: 
+    name: Setup
+    runs-on: ubuntu-latest
+
+    outputs:
+      git-branch: ${{ steps.dev.outputs.git-branch  ||  steps.devmain.outputs.git-branch }}
+    
+    steps:
+      - name: dev-deployment-any-branch
+        if: startsWith(github.event.issue.title, 'deploy')
+
+        id: dev
+        run: |
+          echo "::set-output name=git-branch::$(echo ${{ github.event.issue.title }} | sed 's/^deploy //I')"
+    
+      - name: main branch deployment
+        if: github.event_name == 'push'
+
+        id: devmain
+        run: |
+          echo "::set-output name=git-branch::main"
+
+  build:
+    if: needs.setup.outputs.git-branch
+    needs: [ setup ]
+    environment: dev
+    name: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ needs.setup.outputs.git-branch }}
+      - name: Configure AWS credentials account
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          role-session-name: ${{ secrets.AWS_ROLE }}
+          aws-region: us-east-1
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v1
+      - name: Build docker image
+        run: |
+          docker build . -t formations-fe:latest
+      - name: Push to ECR
+        env:
+          ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+          ECR_REPOSITORY: frontend
+          IMAGE_TAG: ${{ github.run_id }}
+        run: |
+          docker tag formations-fe:latest $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+          docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+      - name: Create build file
+        env:
+          ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+          ECR_REPOSITORY: frontend
+          IMAGE_TAG: ${{ github.run_id }}
+        run: |
+          sed  "s/{{IMAGE}}/$ECR_REGISTRY\/$ECR_REPOSITORY:$IMAGE_TAG/g" .elasticbeanstalk/Dockerrun.aws.json > Dockerrun.aws.json
+          zip -r deploy_package.zip Dockerrun.aws.json
+      - name: Deploy to EB
+        uses: einaregilsson/beanstalk-deploy@v18
+        with:
+          aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          application_name: frontend-web
+          environment_name: frontend-web-dev01
+          version_label: ${{ github.run_id }}
+          region: us-east-1
+          deployment_package: ./deploy_package.zip
+
+  close-issue:
+    name: Close GitHub issue
+    runs-on: ubuntu-18.04
+    needs: [ build ]
+    if: startsWith(github.event.issue.title, 'deploy')
+    steps:
+      - name: Close issue
+        uses: peter-evans/close-issue@v1
+        with:
+          comment: |
+            Deployed branch
+            Auto-closing this issue.

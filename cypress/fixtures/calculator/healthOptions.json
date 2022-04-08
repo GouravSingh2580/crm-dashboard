@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Health",
+    "value": "health"
+  },
+  {
+    "name": "Dental",
+    "value": "dental"
+  },
+  {
+    "name": "Vision",
+    "value": "vision"
+  },
+  {
+    "name": "I'm using my partner's health insurance",
+    "value": "im_using_my_partners_health_insurance"
+  },
+  {
+    "name": "I don't have health insurance",
+    "value": "idont_have_health_insurance"
+  }
+]

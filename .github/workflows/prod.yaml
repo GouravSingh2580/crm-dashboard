@@ -1,0 +1,71 @@
+on:
+  release:
+    types:
+      - published
+name: prod deployment
+jobs:
+  staging-deploy:
+    environment: staging
+    name: staging
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build docker image
+        run: |
+          docker build . -t formations-fe:latest
+      - name: Configure AWS credentials from Test account
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          role-session-name: ${{ secrets.AWS_ROLE }}
+          aws-region: us-east-1
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v1
+      - name: Push to ECR
+        env:
+          ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+          ECR_REPOSITORY: frontend
+          IMAGE_TAG: ${{ github.run_id }}
+        run: |
+          docker tag formations-fe:latest $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+          docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+      - name: Create build file
+        env:
+          ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+          ECR_REPOSITORY: frontend
+          IMAGE_TAG: ${{ github.run_id }}
+        run: |
+          sed  "s/{{IMAGE}}/$ECR_REGISTRY\/$ECR_REPOSITORY:$IMAGE_TAG/g" .elasticbeanstalk/Dockerrun.aws.json > Dockerrun.aws.json
+          zip -r deploy_package.zip Dockerrun.aws.json
+      - name: Upload binaries to release
+        uses: shogo82148/actions-upload-release-asset@v1
+        with:
+          upload_url: ${{ github.event.release.upload_url }}
+          asset_path: deploy_package.zip
+      - name: Deploy to EB frontend-web-staging01
+        uses: einaregilsson/beanstalk-deploy@v18
+        with:
+          aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          application_name: frontend-web
+          environment_name: frontend-web-staging01
+          version_label: ${{ github.run_id }}
+          region: us-east-1
+          deployment_package: ./deploy_package.zip
+  production-deploy:
+    environment: production
+    needs: staging-deploy
+    name: production
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to Production
+        uses: einaregilsson/beanstalk-deploy@v18
+        with:
+          aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          application_name: frontend-web
+          environment_name: frontend-web-production
+          version_label: ${{ github.run_id }}
+          region: us-east-1

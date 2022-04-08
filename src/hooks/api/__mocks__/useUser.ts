@@ -1,0 +1,36 @@
+const useUser = {
+  GetCurrentUser: () => jest.fn().mockImplementation(() => ({
+    data: {
+      id: '61268a98f3bb3878775c46a0',
+      name: {
+        first: 'Test',
+        middle: '',
+        last: 'Customer',
+      },
+      email: 'example@formationscorp.com',
+      stage: 'IncoporationDataReceived',
+      accountId: '61268a98f3bb3878775c469f',
+      companyId: '61268ac5fe6170fdd47dcdc5',
+      contactId: '612686d9f3bb3878775c469e',
+      role: 'Customer',
+      dob: '01/01/1999',
+      createdAt: '2021-08-25T18:23:20.225Z',
+      updatedAt: '2021-09-22T03:12:21.183Z',
+      notification_preference: null,
+      newsletter: null,
+      bankName: 'Test bank',
+      routingNumber: '123456789',
+      bankAccountNumber: '123456789',
+      bankAccountType: 'checking',
+      lastAcceptedVersion: '2021-09-06',
+      tncAcceptedAt: '2021-09-09T16:08:45.347Z',
+    },
+  })),
+  GetUser: jest.fn(),
+  GetUsersIncludeCompanies: jest.fn(),
+  UpdateUser: jest.fn(),
+  GetUserIdentity: jest.fn(),
+  UpdateUserIdentity: jest.fn(),
+  GetUserIdentityById: jest.fn(),
+};
+export default useUser;

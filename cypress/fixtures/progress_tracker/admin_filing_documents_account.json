@@ -1,0 +1,84 @@
+{
+  "data": {
+    "id": "61156916630d9f92ee1acab9",
+    "status": {
+      "label": "ACTIVE",
+      "updatedAt": "2021-11-23T12:14:36.61Z",
+      "updatedBy": "60e88808782b4666fd2ac140"
+    },
+    "progress": [
+      {
+        "stage": "personalDetails",
+        "group": "incorporation",
+        "status": [
+          {
+            "status": "inProgress",
+            "comment": "",
+            "updated_at": "2021-12-07T16:02:36.6Z",
+            "updated_by": "60e88808782b4666fd2ac140"
+          },
+          {
+            "status": "completed",
+            "comment": "",
+            "updated_at": "2021-12-07T16:19:18.978Z",
+            "updated_by": "60e88808782b4666fd2ac140"
+          },
+          {
+            "status": "inProgress",
+            "comment": "",
+            "updated_at": "2021-12-07T17:47:06.508Z",
+            "updated_by": "60e88808782b4666fd2ac140"
+          },
+          {
+            "status": "completed",
+            "comment": "",
+            "updated_at": "2021-12-28T13:07:28.387Z",
+            "updated_by": "61016c7cb989754fab0f0213"
+          }
+        ]
+      },
+      {
+        "stage": "addressDetails",
+        "group": "incorporation",
+        "status": [
+          {
+            "status": "completed",
+            "comment": "",
+            "updated_at": "2021-12-14T19:29:57.794Z",
+            "updated_by": "61016c7cb989754fab0f0213"
+          }
+        ]
+      },
+      {
+        "stage": "documentSigning",
+        "group": "formCompletion",
+        "status": [
+          {
+            "status": "inProgress",
+            "comment": "",
+            "updated_at": "2021-12-15T06:16:28.038Z",
+            "updated_by": "61016c7cb989754fab0f0213"
+          },
+          {
+            "status": "completed",
+            "comment": "",
+            "updated_at": "2021-12-15T06:16:32.066Z",
+            "updated_by": "61016c7cb989754fab0f0213"
+          }
+        ]
+      },
+      {
+        "stage": "bankSelection",
+        "group": "formCompletion",
+        "status": [
+          {
+            "status": "completed",
+            "comment": "",
+            "updated_at": "2021-12-22T10:26:08.285Z",
+            "updated_by": "61016c7cb989754fab0f0213"
+          }
+        ]
+      }
+    ]
+  }
+}
